@@ -1,19 +1,13 @@
 import java.io.*;
 class CopyFile{
-public static void main(String args[]) throws IOException{
-FileReader fr=new FileReader("C:\\Users\\student\\Desktop\\training\\class10\\abc.txt");
-FileWriter fw=new FileWriter("C:\\Users\\student\\Desktop\\training\\class10\\xyz.txt");
-try{
-int c=fr.read();
-while(c!=-1){
-fw.write(c);
-c=fr.read();
+public static void main(String args[]) 
+{
+File file=new File("C:\\Users\\student\\Desktop\\training\\claas9\\aaa.txt");
+if(File.CreateNewFile()){
+System.out.println("success");
 }
-}catch(IOException e){
-System.out.println(e);
-}finally{
-fr.close();
-fw.close();
+else 
+System.out.println("Error file already exist");
 }
 }
-}
+
